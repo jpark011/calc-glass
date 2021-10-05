@@ -53,12 +53,13 @@ body::after {
 .container .calculator {
   position: relative;
   display: grid;
+  width: 300px;
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows: 75px 35px repeat(5, 75px);
 }
 
 .container .calculator .value {
   grid-column: span 4;
-  height: 75px;
-  width: 300px;
   text-align: right;
   border: none;
   outline: none;
@@ -71,7 +72,6 @@ body::after {
 }
 
 .container .calculator .prev.value {
-  height: 35px;
   font-size: 16px;
   padding-top: 0;
   color: #999;
@@ -81,8 +81,6 @@ body::after {
 .container .calculator span {
   display: grid;
   place-items: center;
-  width: 75px;
-  height: 75px;
   color: #fff;
   font-weight: 400;
   cursor: pointer;
@@ -108,13 +106,11 @@ body::after {
 
 .container .calculator span[data-char='AC'] {
   grid-column: span 2;
-  width: 100%;
   background: rgba(255, 255, 255, 0.05);
 }
 
 .container .calculator span[data-char='+'] {
   grid-row: span 2;
-  height: 100%;
 }
 
 .container .calculator span[data-char='='] {
