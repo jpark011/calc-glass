@@ -17,7 +17,7 @@ function onClickBtn({ target }) {
     return;
   }
 
-  if (char === 'C') {
+  if (char === 'AC') {
     ans.value = '';
     return;
   }
