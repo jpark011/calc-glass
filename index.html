@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calc</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./vanilla-tilt.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div
+      class="container"
+      onclick="onClickBtn(event)"
+      data-tilt
+      data-tilt-glare
+      data-tilt-speed="200"
+      data-tilt-max-glare="0.2"
+    >
+      <form class="calculator" name="calc">
+        <input type="text" readonly class="value" id="ans" />
+        <input type="text" readonly class="prev value" id="prev" />
+        <span class="btn" data-char="AC">AC</span>
+        <span class="btn" data-char="/">/</span>
+        <span class="btn" data-char="*">*</span>
+        <span class="btn" data-char="7">7</span>
+        <span class="btn" data-char="8">8</span>
+        <span class="btn" data-char="9">9</span>
+        <span class="btn" data-char="-">-</span>
+        <span class="btn" data-char="4">4</span>
+        <span class="btn" data-char="5">5</span>
+        <span class="btn" data-char="6">6</span>
+        <span class="btn" data-char="+">+</span>
+        <span class="btn" data-char="1">1</span>
+        <span class="btn" data-char="2">2</span>
+        <span class="btn" data-char="3">3</span>
+        <span class="btn" data-char="0">0</span>
+        <span class="btn" data-char="00">00</span>
+        <span class="btn" data-char=".">.</span>
+        <span class="btn" data-char="=">=</span>
+      </form>
+    </div>
+  </body>
+</html>
