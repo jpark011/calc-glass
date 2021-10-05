@@ -53,13 +53,12 @@ body::after {
 .container .calculator {
   position: relative;
   display: grid;
-  width: 300px;
-  grid-template-columns: repeat(4, 75px);
-  grid-template-rows: 75px 35px repeat(5, 75px);
+  grid-template-columns: repeat(5, 75px [numpad]);
+  grid-template-rows: 75px 35px repeat(5, 75px [numpad]);
 }
 
 .container .calculator .value {
-  grid-column: span 4;
+  grid-column: 1 / -1;
   text-align: right;
   border: none;
   outline: none;
@@ -104,13 +103,26 @@ body::after {
   font-weight: 500;
 }
 
-.container .calculator span[data-char='AC'] {
-  grid-column: span 2;
-  background: rgba(255, 255, 255, 0.05);
+.container .calculator span[data-char='🐳'] {
+  background: rgba(0, 140, 255, 0.05);
+}
+
+.container .calculator span[data-char='AC'],
+.container .calculator span[data-char='Del'] {
+  background: rgba(255, 0, 0, 0.05);
 }
 
 .container .calculator span[data-char='+'] {
   grid-row: span 2;
+}
+
+.container .calculator span[data-char='0'] {
+  grid-column: span 2;
+}
+
+.container .calculator span[data-char='+'] {
+  grid-row: span 2;
+  background: rgba(0, 140, 255, 0.05);
 }
 
 .container .calculator span[data-char='='] {
